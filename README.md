@@ -5,9 +5,9 @@
 <p align="center"><img src="https://github.com/PyoJunCode/discord_chatbot/blob/master/images/game.gif"></p>
 
 
-
-디스코드 서버에서 사용자의 메세지에 나타나는 감정에 맞는 GIF Image를 보여주는 봇입니다.
-
+<br>
+디스코드 서버에서 사용자의 메세지에 나타나는 감정에 맞는 GIF Image를 보여주는 봇입니다.<br>
+<br>
 
 
 <p align="center">tensorflow:2.5.0,	  TFX:0.30.0,	  	Kubeflow:1.7.1,	</p>
@@ -24,16 +24,17 @@ Data : [Big](https://aihub.or.kr/aidata/7978), [Small](https://github.com/songys
 
 ## Intro
 
-처음에는 '*평소 게임을 하며 이용하던 디스코드 서버에 내가 만든 봇이 활동을 하면 어떨까*?' 로 만들기 시작해 
+처음에는 '*평소 게임을 하며 이용하던 디스코드 서버에 내가 만든 봇이 활동을 하면 어떨까*?' 로 만들기 시작해 <br>
 
-기능을 하나씩 덧붙여 나가다가 최근에 **머신러닝 서비스**를 봇에 도입하고 싶어서 시작하게 된 프로젝트 입니다.
-
-
+기능을 하나씩 덧붙여 나가다가 최근에 **머신러닝 서비스**를 봇에 도입하고 싶어서 시작하게 된 프로젝트 입니다.<br>
+<br>
+<br>
 
 단순히 NLP 모델을 학습시켜 사용자의 메세지에 적절한 GIF 이미지로 응답하는것을 넘어서서,  
 
 **이상적인 ML Production 환경**을 구축하는것을 목표로 삼았습니다.
-
+<br>
+<br>
 
 
 인터넷 채팅에서 나오는 엄청난 양의 live message data중 일부가 사람의 feed back 으로 labeling된다면, 실제 Production 환경에서 발생할 수 있는 data skew와 drift를 바로잡아줄 수 있는 매우 고품질의 Training example이 됩니다.
