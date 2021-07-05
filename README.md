@@ -2,9 +2,7 @@
 
 
 
-```html
 <p align="center"><img src="https://github.com/PyoJunCode/discord_chatbot/blob/master/images/game.gif"></p>
-```
 
 
 
@@ -52,14 +50,15 @@ Data : [Big](https://aihub.or.kr/aidata/7978), [Small](https://github.com/songys
 
 ## Overall Structure
 
-사용자의 피드백으로 부터 새로운 감정 데이터쌍을 생성해 새로운 모델의 학습에 사용되는 전체 개요도
+**사용자의 피드백으로 부터 새로운 감정 데이터쌍을 생성해 새로운 모델의 학습에 사용되는 전체 개요도**
 
 <p align="center"><img src="https://github.com/PyoJunCode/discord_chatbot/blob/master/images/CICD.png"></p>
 
-사용자의 명령어 호출로부터 GIF를 받기 까지의 과정
+<br>
+
+**사용자의 명령어 호출로부터 GIF를 받기 까지의 과정**
 
 <p align="center"><img src="https://github.com/PyoJunCode/discord_chatbot/blob/master/images/structure.png"></p>
-
 
 <br>
 
@@ -140,11 +139,13 @@ Data를 학습에 적합하게 만들기 위해서 몇가지 Cleansing/Preproces
 
 우선 TFX pipeline components인 **StatisticGen**을 통해 Training data에 불순물이 들어있는것을 확인하였습니다.
 
-
+<br>
 
 *compare train/val statistics*
 
 <p align="center"><img src="https://github.com/PyoJunCode/discord_chatbot/blob/master/images/compare.png"></p>
+
+<br>
 
 *check anomalies*
 
@@ -247,7 +248,7 @@ docker run -t --rm -p 8501:8501     -v "/$TESTDATA/saved_model:/models/chatbot" 
 
 
 
-<p align="center"><img src="https://github.com/PyoJunCode/discord_chatbot/blob/master/images/sad.png"></p>
+<p align="center"><img src="https://github.com/PyoJunCode/discord_chatbot/blob/master/images/sad.gif"></p>
 
  채팅창에 !반응 '할말' 을 치면 GIF 반응이 올라옵니다.
 
@@ -311,7 +312,7 @@ parse = self.encoding(arg) #encoding 함수를 통해 문장을 tokenize 합니�
 
 
 
-앞서 설명했듯 Discord bot의 잘못된 GIF 응답에 대해서, 유저의 feedback으로 emoji를 응답받으면 새로운 데이터쌍이 생성됩니다.  (discordbot API로 tracking)
+앞서 설명했듯 Discord bot의 **잘못된 GIF 응답**에 대해서, 유저의 feedback으로 emoji를 응답받으면 새**로운 데이터쌍**이 생성됩니다.  (discordbot API로 tracking)
 
 (ex: !반응 나 화났어 에 대해 잘못된 GIF가 나와서 유저가 :angry:로 reaction -> msg: '나 화났어', label: 'angry'​) 의 데이터 생성)
 
@@ -342,7 +343,7 @@ parse = self.encoding(arg) #encoding 함수를 통해 문장을 tokenize 합니�
 
 
 
-일정한 주기마다 디스코드 채팅창에 !업로드 를 입력하면, 이때까지 쌓은 새로운 데이터들이 연결된 AWS S3의 bucket에 저장됩니다.
+일정한 주기마다 디스코드 채팅창에 **!업로드** 를 입력하면, 이때까지 쌓은 새로운 데이터들이 연결된 AWS S3의 bucket에 저장됩니다.
 
 
 
@@ -372,10 +373,6 @@ GCP의 AI platform notebook에서 해당 S3 bucket에 접근하여 새로운 데
 
 
 
-
-
-
-
 <br>
 
 ## Set up Kubeflow cluster
@@ -398,6 +395,8 @@ Issue가 최대한 많이 고쳐진 버젼을 사용하기 위해 수동적으�
 
 글 작성 당시 최신버전은 1.7.0-alpha.2 이며, Google AI Platform의 Terminal을 열어 아래의 명령어를 차례대로 실행하면 됩니다.
 
+<br>
+
 ```
 CLUSTER_NAME="chatbot"
 ZONE="us-central1-a"
@@ -410,7 +409,7 @@ gcloud container clusters create $CLUSTER_NAME \
      --scopes $SCOPES
 ```
 
-
+<br>
 
 ```
 export PIPELINE_VERSION=1.7.0-alpha.2
