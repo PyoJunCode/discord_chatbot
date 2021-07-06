@@ -218,7 +218,7 @@ colab, AI platform, Deep learning AMI 등의 비용 문제로 Pre-trained koELEC
 
 
 
-<p align="center"><img src="https://github.com/PyoJunCode/discord_chatbot/blob/master/images/serving.png"></p>
+<p align="center"><img src="https://github.com/PyoJunCode/discord_chatbot/blob/master/images/serving.PNG"></p>
 
 
 
@@ -226,11 +226,11 @@ colab, AI platform, Deep learning AMI 등의 비용 문제로 Pre-trained koELEC
 
 ### Model Deploy
 
-Model은 TFX pipeline의 Pusher에서 배포됩니다. 
+Model은 TFX pipeline의 **Pusher** 에서 배포됩니다. 
 
 Savedmodel 파일이 AWS Deep Learning AMI에 전송이 되면, 해당 인스턴스 안에서 작동되고 있는
 
-Tensorflow Serving이 Model 파일을 통해 Inference를 시작해주는 포트를 개방합니다.
+**Tensorflow Serving** 이 Model 파일을 통해 Inference를 시작해주는 포트를 개방합니다.
 
 
 
